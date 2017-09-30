@@ -80,7 +80,7 @@ const imageWidth = dimensions.width;
 
 const styles = {
     textStyle:{
-        width:270
+        width: imageWidth - 115
     },
     thumbnailStyle:{
         width: 80,
@@ -105,15 +105,14 @@ const styles = {
     },
     galleryList:{
         height : (imageHeight/3) - 12,
-        width: (imageWidth/3) - 5,
+        width: (imageWidth/3) - 5.5,
         padding: 2,
         margin: 2,
         overflow: 'hidden'
     },
     galleryImage:{
-        height : (imageHeight - 4)/3,
-        width: (imageWidth - 4)/3,
-        overflow: 'hidden'
+        height : imageHeight/3,
+        width: imageWidth/3,
     }
 }
 
