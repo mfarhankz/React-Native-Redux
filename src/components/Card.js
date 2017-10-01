@@ -13,7 +13,7 @@ const Card = (props) => {
 const styles = {
 
     cardStyle:{
-        backgroundColor: '#f6f6f6',
+        backgroundColor: '#fff',
         borderColor: '#efefef',
         borderWidth: 1,
         elevation: 1,
