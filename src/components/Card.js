@@ -17,7 +17,7 @@ const styles = {
         borderColor: '#efefef',
         borderWidth: 1,
         elevation: 1,
-        marginTop: 10,
+        marginTop: 20,
         borderBottomWidth: 0,
     }
 
