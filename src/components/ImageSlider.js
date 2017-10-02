@@ -3,28 +3,26 @@ import { Dimensions, View, Image } from 'react-native';
 import Swiper from 'react-native-swiper'
 
 const ImageSlider = ({ SliderData }) => {
-    console.log(SliderData)
+const imageLink = SliderData.result;
+
+
+
+    for(const key in imageLink) {
+        const value = imageLink[key];
+        for(const key in value) {
+            const value2 = value[key].thumbnail;
+            console.log(value2)
+        }
+    }
+
+
+
     const { sliderContainer, slide, sliderImage, dot, activeDot, paginationStyle } = styles;
     return (
         <Swiper style={ sliderContainer } dot={<View style={ dot } />}
-                activeDot={<View style={ activeDot } />} paginationStyle={ paginationStyle }>
+                activeDot={<View style={ activeDot } />} paginationStyle={ paginationStyle } autoplay>
             <View style={ slide }>
-                <Image style={ sliderImage } source={{ uri:
-                'https://scontent.fkhi4-1.fna.fbcdn.net/v/t31.0-8/14324326_1440007276014312_3446093104567654082_o.jpg' +
-                '?_nc_eui2=v1%3AAeG3diGp2ePHHTkRlmIG-i0ygckmiIw0fVbAjyWs-0Gjnj-r9_2khd828EEe9xgSEtiMPF2ycoOYQCUSYac' +
-                'CX6UL0Qt-DDfjPZf8dqoWPNNMKtQ95g3rSzKnwn9PSjzislg&oh=d0c8c0df10822ea6a62215ba882532be&oe=5A7E55E8' }} />
-            </View>
-            <View style={ slide }>
-                <Image style={ sliderImage } source={{ uri:
-                'https://scontent.fkhi4-1.fna.fbcdn.net/v/t31.0-8/14324326_1440007276014312_3446093104567654082_o.jpg' +
-                '?_nc_eui2=v1%3AAeG3diGp2ePHHTkRlmIG-i0ygckmiIw0fVbAjyWs-0Gjnj-r9_2khd828EEe9xgSEtiMPF2ycoOYQCUSYac' +
-                'CX6UL0Qt-DDfjPZf8dqoWPNNMKtQ95g3rSzKnwn9PSjzislg&oh=d0c8c0df10822ea6a62215ba882532be&oe=5A7E55E8' }} />
-            </View>
-            <View style={ slide }>
-                <Image style={ sliderImage } source={{ uri:
-                'https://scontent.fkhi4-1.fna.fbcdn.net/v/t31.0-8/14324326_1440007276014312_3446093104567654082_o.jpg' +
-                '?_nc_eui2=v1%3AAeG3diGp2ePHHTkRlmIG-i0ygckmiIw0fVbAjyWs-0Gjnj-r9_2khd828EEe9xgSEtiMPF2ycoOYQCUSYac' +
-                'CX6UL0Qt-DDfjPZf8dqoWPNNMKtQ95g3rSzKnwn9PSjzislg&oh=d0c8c0df10822ea6a62215ba882532be&oe=5A7E55E8' }} />
+                <Image style={ sliderImage } source={{ uri: 'https://d1m37qdzmw041i.cloudfront.net/photos/posts/thumbnails/16080756-1458765641755.jpg'}} />
             </View>
         </Swiper>
     );
