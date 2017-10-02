@@ -2,7 +2,8 @@ import React from 'react';
 import { Dimensions, View, Image } from 'react-native';
 import Swiper from 'react-native-swiper'
 
-const ImageSlider = () => {
+const ImageSlider = ({ SliderData }) => {
+    console.log(SliderData)
     const { sliderContainer, slide, sliderImage, dot, activeDot, paginationStyle } = styles;
     return (
         <Swiper style={ sliderContainer } dot={<View style={ dot } />}
