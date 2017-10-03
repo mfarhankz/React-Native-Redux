@@ -4,6 +4,7 @@ import { PhotoGrid, UserDetail, ImageSlider } from './components'
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
 import axios from 'axios';
+import reducers from './reducers'
 
 
 
@@ -42,9 +43,9 @@ class App extends Component{
     render(){
         const { UserData, SliderData } = this.state;
         return(
-            <Provider store={ createStore}>
+            <Provider store={createStore(reducers)}>
                 <ScrollView>
-                    <View style={ styles.containerView }>
+                    <View style={ styles.container }>
                         <UserDetail UserData={UserData}/>
                         <ImageSlider SliderData={SliderData}/>
                         <PhotoGrid/>
@@ -55,17 +56,14 @@ class App extends Component{
     }
 }
 
+export default App;
+
+
 const styles = {
 
-    containerView:{
-        backgroundColor: '#fff',
-        borderColor: '#efefef',
-        borderWidth: 1,
-        elevation: 1,
-        marginTop: 20,
-        borderBottomWidth: 0,
+    container:{
+        flex: 1,
+        marginTop: 20
     }
 
 };
-
-export default App;
