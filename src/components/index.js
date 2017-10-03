@@ -1,4 +1,3 @@
-export * from './Card';
-export * from './UserDetail';
-export * from './ImageSlider';
-export * from './PhotoGrid';
+export * from './userInfo/UserInfo';
+export * from './photoSlider/PhotoSlider';
+export * from './photoGrid/PhotoGrid';
