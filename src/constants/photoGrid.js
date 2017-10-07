@@ -1,6 +1,3 @@
 export const PHOTO_GRID_API = 'PHOTO_GRID_API';
 export const PHOTO_GRID_API_SUCCESS = 'PHOTO_GRID_API_SUCCESS';
 export const PHOTO_GRID_API_ERROR = 'PHOTO_GRID_API_ERROR';
-
-
-//hello world
